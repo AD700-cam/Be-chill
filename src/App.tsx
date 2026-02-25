@@ -18,7 +18,7 @@ function App() {
       gestureDirection: 'vertical',
       smooth: true,
       mouseMultiplier: 1,
-      smoothTouch: true,
+      smoothTouch: false, // Critical for mobile performance (use native scroll)
       touchMultiplier: 2,
       infinite: false,
     } as any)

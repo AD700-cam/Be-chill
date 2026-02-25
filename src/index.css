@@ -95,7 +95,13 @@
   .gradient-bg {
     background: linear-gradient(-45deg, #f5eed3, #ffd1ea, #f5eed3, #ffe6cc);
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+  }
+
+  /* Only animate gradient on devices that aren't primarily touch (laptops/desktops) */
+  @media (hover: hover) and (pointer: fine) {
+    .gradient-bg {
+      animation: gradientBG 15s ease infinite;
+    }
   }
 
   .shadow-brand {

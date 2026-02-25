@@ -33,7 +33,7 @@ export default function Location() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-pink text-glow font-heading mb-4">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-brand-pink text-glow font-heading mb-4">
                         Come Say Hi!
                     </h2>
                     <p className="text-lg sm:text-xl font-medium text-brand-brown/80 max-w-2xl mx-auto">
@@ -106,7 +106,7 @@ export default function Location() {
                             href="https://maps.app.goo.gl/MQarUVtuL56FVLLU9"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-white text-brand-pink font-black py-4 rounded-full text-center hover:bg-brand-yellow hover:text-brand-brown transition-colors shadow-[0_10px_20px_rgba(0,0,0,0.1)] flex justify-center items-center gap-3 text-lg z-10 group/btn"
+                            className="bg-white text-brand-pink font-bold py-4 rounded-full text-center hover:bg-brand-yellow hover:text-brand-brown transition-colors shadow-[0_10px_20px_rgba(0,0,0,0.1)] flex justify-center items-center gap-3 text-lg z-10 group/btn"
                         >
                             Get Directions <span className="group-hover/btn:translate-x-2 transition-transform duration-300">📍</span>
                         </a>

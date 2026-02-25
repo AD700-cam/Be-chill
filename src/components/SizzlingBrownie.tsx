@@ -89,7 +89,7 @@ export default function SizzlingBrownie() {
         <section ref={containerRef} className="relative w-full h-screen overflow-hidden bg-brand-brown">
             {/* Header Title inside the pinned section */}
             <div className="absolute top-6 left-6 md:top-24 md:left-24 z-20">
-                <h2 className="text-3xl sm:text-4xl md:text-7xl font-black text-brand-white font-heading text-glow drop-shadow-2xl">
+                <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold text-brand-white font-heading text-glow drop-shadow-2xl">
                     Signature <br className="md:hidden" /><span className="text-brand-pink">Specials</span>
                 </h2>
                 <p className="text-base sm:text-xl text-brand-yellow/80 mt-1 md:mt-2 font-medium max-w-[200px] md:max-w-md hidden sm:block">
@@ -105,7 +105,7 @@ export default function SizzlingBrownie() {
 
                             {/* Text Content */}
                             <div className="flex-1 text-center md:text-left w-full px-4 md:px-0">
-                                <h3 className={`text-4xl sm:text-5xl md:text-7xl font-black mb-4 md:mb-6 ${special.accent} font-heading drop-shadow-xl`}>
+                                <h3 className={`text-4xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-6 ${special.accent} font-heading drop-shadow-xl`}>
                                     {special.title}
                                 </h3>
                                 <p className="text-lg sm:text-2xl text-white/90 font-medium leading-relaxed max-w-xl mx-auto md:mx-0">
@@ -127,7 +127,7 @@ export default function SizzlingBrownie() {
                                     />
 
                                     {/* Badge counter for verification */}
-                                    <div className="absolute top-6 left-6 z-20 bg-brand-pink text-brand-white px-4 py-1 rounded-full font-black text-xl shadow-lg border border-white/50">
+                                    <div className="absolute top-6 left-6 z-20 bg-brand-pink text-brand-white px-4 py-1 rounded-full font-bold text-xl shadow-lg border border-white/50">
                                         {idx + 1}/{specials.length}
                                     </div>
                                 </div>

@@ -41,7 +41,7 @@ export default function Hero() {
 
                 {/* Text Content */}
                 <div className="flex flex-col gap-6 text-center md:text-left">
-                    <h1 ref={headingRef} className="text-5xl sm:text-6xl md:text-8xl font-black text-brand-pink text-glow leading-tight">
+                    <h1 ref={headingRef} className="text-5xl sm:text-6xl md:text-8xl font-bold text-brand-pink text-glow leading-tight">
                         The finest scoops<br />in Kolar.
                     </h1>
                     <p className="text-lg sm:text-xl md:text-2xl font-medium text-brand-brown/80 max-w-lg mx-auto md:mx-0">

@@ -58,7 +58,7 @@ export default function SocialGrid() {
             <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-brand-white to-transparent opacity-20"></div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 text-center mb-10 sm:mb-16">
-                <h2 className="text-[clamp(2.25rem,7vw,4rem)] md:text-[clamp(3.5rem,10vw,8rem)] font-black text-white mb-4 sm:mb-6 text-glow font-heading uppercase tracking-tighter leading-none">
+                <h2 className="text-[clamp(2.25rem,7vw,4rem)] md:text-[clamp(3.5rem,10vw,8rem)] font-bold text-white mb-4 sm:mb-6 text-glow font-heading uppercase tracking-tighter leading-none">
                     Follow the <br className="sm:hidden" /><span className="text-brand-yellow">#BeChill</span>
                 </h2>
                 <p className="text-white/90 text-lg sm:text-xl font-medium max-w-2xl mx-auto">
@@ -86,7 +86,7 @@ export default function SocialGrid() {
                             {/* Hover Overlay */}
                             <div className="absolute inset-0 bg-brand-brown/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center backdrop-blur-sm p-8 text-center">
                                 <span className="text-white text-5xl mb-4 drop-shadow-lg">❤️</span>
-                                <p className="text-white font-black text-xl leading-tight">Authentic <br /> Be Chill Moments</p>
+                                <p className="text-white font-bold text-xl leading-tight">Authentic <br /> Be Chill Moments</p>
                             </div>
                         </div>
                     ))}
@@ -98,7 +98,7 @@ export default function SocialGrid() {
                     href="https://www.instagram.com/bechill_sundae?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-brand-yellow text-brand-brown font-black text-xl sm:text-2xl px-8 sm:px-16 py-4 sm:py-6 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-white active:scale-95 group w-full sm:w-auto"
+                    className="inline-block bg-brand-yellow text-brand-brown font-bold text-xl sm:text-2xl px-8 sm:px-16 py-4 sm:py-6 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-white active:scale-95 group w-full sm:w-auto"
                 >
                     Join the Vibe <span className="group-hover:translate-x-2 inline-block transition-transform ml-2">@bechill_sundae</span>
                 </a>

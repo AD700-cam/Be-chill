@@ -46,15 +46,15 @@ export default function Navbar() {
 
                     {/* Desktop Menu */}
                     <ul className="hidden md:flex gap-8 font-semibold text-lg items-center">
-                        <li className="hover:text-brand-pink transition-colors cursor-pointer" onClick={() => document.getElementById('flavors')?.scrollIntoView({ behavior: 'smooth' })}>Flavors</li>
-                        <li className="hover:text-brand-pink transition-colors cursor-pointer" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>About</li>
-                        <li className="hover:text-brand-pink transition-colors cursor-pointer" onClick={() => document.getElementById('social')?.scrollIntoView({ behavior: 'smooth' })}>Social</li>
+                        <li tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter') document.getElementById('flavors')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-brand-pink transition-colors cursor-pointer focus-visible:outline-none focus-visible:text-brand-pink" onClick={() => document.getElementById('flavors')?.scrollIntoView({ behavior: 'smooth' })}>Flavors</li>
+                        <li tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter') document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-brand-pink transition-colors cursor-pointer focus-visible:outline-none focus-visible:text-brand-pink" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>About</li>
+                        <li tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter') document.getElementById('social')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-brand-pink transition-colors cursor-pointer focus-visible:outline-none focus-visible:text-brand-pink" onClick={() => document.getElementById('social')?.scrollIntoView({ behavior: 'smooth' })}>Social</li>
                         <li>
                             <a
                                 href="https://maps.app.goo.gl/MQarUVtuL56FVLLU9"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-brand-pink text-brand-white px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform shadow-lg"
+                                className="bg-brand-pink text-brand-white px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform shadow-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-pink/50"
                             >
                                 Visit Us
                             </a>

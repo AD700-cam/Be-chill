@@ -18,10 +18,10 @@ export default function Footer() {
                 <div>
                     <h3 className="font-bold text-xl mb-4 text-white">Explore</h3>
                     <ul className="space-y-4 md:space-y-2 opacity-80">
-                        <li><a href="#" className="inline-block py-2 hover:text-brand-pink transition-colors">Menu</a></li>
-                        <li><a href="#" className="inline-block py-2 hover:text-brand-pink transition-colors">Our Story</a></li>
-                        <li><a href="#" className="inline-block py-2 hover:text-brand-pink transition-colors">Locations</a></li>
-                        <li><a href="#" className="inline-block py-2 hover:text-brand-pink transition-colors">Contact</a></li>
+                        <li><a href="#" className="inline-block py-2 hover:text-brand-pink transition-colors focus-visible:outline-none focus-visible:text-brand-pink">Menu</a></li>
+                        <li><a href="#" className="inline-block py-2 hover:text-brand-pink transition-colors focus-visible:outline-none focus-visible:text-brand-pink">Our Story</a></li>
+                        <li><a href="#" className="inline-block py-2 hover:text-brand-pink transition-colors focus-visible:outline-none focus-visible:text-brand-pink">Locations</a></li>
+                        <li><a href="#" className="inline-block py-2 hover:text-brand-pink transition-colors focus-visible:outline-none focus-visible:text-brand-pink">Contact</a></li>
                     </ul>
                 </div>
 

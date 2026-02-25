@@ -41,6 +41,7 @@ export default function About() {
                             src="/images/storefront.jpg"
                             alt="Be Chill Storefront"
                             className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                            loading="lazy"
                         />
                     </div>
                     {/* Decorative Element */}

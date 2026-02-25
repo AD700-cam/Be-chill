@@ -98,7 +98,7 @@ export default function SocialGrid() {
                     href="https://www.instagram.com/bechill_sundae?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-brand-yellow text-brand-brown font-bold text-xl sm:text-2xl px-8 sm:px-16 py-4 sm:py-6 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-white active:scale-95 group w-full sm:w-auto"
+                    className="inline-block bg-brand-yellow text-brand-brown font-bold text-xl sm:text-lg px-8 sm:px-16 py-4 sm:py-6 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-white active:scale-95 group w-full sm:w-auto focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-pink/50"
                 >
                     Join the Vibe <span className="group-hover:translate-x-2 inline-block transition-transform ml-2">@bechill_sundae</span>
                 </a>

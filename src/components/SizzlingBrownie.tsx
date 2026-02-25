@@ -124,6 +124,7 @@ export default function SizzlingBrownie() {
                                         src={special.image}
                                         alt={special.title}
                                         className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out"
+                                        loading="lazy"
                                     />
 
                                     {/* Badge counter for verification */}

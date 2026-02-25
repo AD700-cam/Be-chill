@@ -80,6 +80,7 @@ export default function Flavors() {
                                     src={flavor.image}
                                     alt={flavor.name}
                                     className="w-full h-full object-cover rounded-[1.5rem] transition-transform duration-700 group-hover:scale-110"
+                                    loading="lazy"
                                 />
                             </div>
 

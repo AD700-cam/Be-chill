@@ -88,16 +88,6 @@ export default function Flavors() {
                                 <p className="text-brand-brown/70 font-medium leading-relaxed mb-6 flex-grow text-sm sm:text-base">
                                     {flavor.desc}
                                 </p>
-
-                                <a
-                                    href="https://maps.app.goo.gl/MQarUVtuL56FVLLU9"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-white/90 backdrop-blur-sm text-brand-brown font-bold px-6 py-3 sm:py-4 rounded-full border border-brand-brown/10 hover:bg-brand-pink hover:text-white transition-all duration-300 shadow-md flex items-center justify-center gap-2 mt-auto text-sm sm:text-base w-full group-hover:border-brand-pink/30"
-                                    onClick={(e) => e.stopPropagation()}
-                                >
-                                    Get Directions <span className="text-brand-pink group-hover:text-white transition-colors">📍</span>
-                                </a>
                             </div>
 
                             {/* Hover Decorative */}

@@ -22,7 +22,13 @@ export default function SizzlingBrownie() {
             scrollTrigger: {
                 trigger: containerRef.current,
                 pin: true,
-                scrub: 0.5,
+                scrub: 1, // smoother scrub
+                snap: {
+                    snapTo: 1 / (specials.length - 1),
+                    duration: { min: 0.2, max: 0.5 },
+                    delay: 0.1,
+                    ease: 'power1.inOut'
+                },
                 anticipatePin: 1,
                 start: "top top",
                 end: () => `+=${scrollWidth}`,

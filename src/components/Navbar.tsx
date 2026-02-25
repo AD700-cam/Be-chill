@@ -36,12 +36,12 @@ export default function Navbar() {
         <>
             <nav
                 ref={navRef}
-                className={`fixed top-4 left-0 right-0 mx-auto w-[95%] max-w-7xl z-50 px-6 sm:px-8 py-3 sm:py-2 transition-all duration-300 rounded-[2rem] md:rounded-full border border-white/50 shadow-2xl ${isScrolled ? 'bg-brand-yellow/90 backdrop-blur-md' : 'glass text-brand-brown'}`}
+                className={`fixed top-4 left-0 right-0 mx-auto w-[95%] max-w-7xl z-50 px-5 sm:px-8 py-2 md:py-3 transition-all duration-300 rounded-[1.5rem] md:rounded-full border border-white/50 shadow-2xl ${isScrolled ? 'bg-brand-yellow/90 backdrop-blur-md' : 'glass text-brand-brown'}`}
             >
                 <div className="max-w-7xl mx-auto flex justify-between items-center">
                     {/* Logo Image */}
                     <div className="cursor-pointer">
-                        <img src="/logo.jpg" alt="Be Chill Logo" className="h-12 md:h-14 rounded-xl shadow-sm object-cover mix-blend-multiply" />
+                        <img src="/logo.jpg" alt="Be Chill Logo" className="h-10 md:h-14 rounded-xl shadow-sm object-cover mix-blend-multiply" />
                     </div>
 
                     {/* Desktop Menu */}

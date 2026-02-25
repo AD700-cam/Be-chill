@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-pink: #d14d9f;
+  /* Slightly deeper, less harsh pink */
+  --color-brand-yellow: #f5eed3;
+  /* Warmer, less glaring pastel yellow */
+  --color-brand-brown: #4a2e23;
+  /* Richer, darker chocolate */
+  --color-brand-white: #ffffff;
+  --font-sans: 'Nunito', 'Inter', system-ui, sans-serif;
+  --font-heading: 'Fredoka', 'Chewy', 'Outfit', system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --brand-pink: #d14d9f;
+    --brand-yellow: #f5eed3;
+    --brand-brown: #4a2e23;
+    --brand-white: #ffffff;
+
+    /* Fluid Typography Variables */
+    --font-size-h1: clamp(2.5rem, 5vw + 1rem, 5rem);
+    --font-size-h2: clamp(2rem, 4vw + 1rem, 4rem);
+    --font-size-h3: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+    --font-size-base: clamp(1rem, 2vw + 0.25rem, 1.25rem);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-yellow text-brand-brown font-sans antialiased overflow-x-hidden;
+    font-size: var(--font-size-base);
+  }
+
+  h1 {
+    font-size: var(--font-size-h1);
+    line-height: 1.1;
+    @apply font-heading tracking-wide;
+  }
+
+  h2 {
+    font-size: var(--font-size-h2);
+    line-height: 1.2;
+    @apply font-heading tracking-wide;
+  }
+
+  h3 {
+    font-size: var(--font-size-h3);
+    line-height: 1.3;
+    @apply font-heading tracking-wide;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @apply font-heading tracking-wide;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--brand-yellow);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--brand-pink);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-brown);
+  }
+
+  /* Ensure all sections account for the sticky navbar when navigating */
+  section[id] {
+    scroll-margin-top: 120px;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(223, 68, 167, 0.4);
+  }
+
+  .glass {
+    @apply bg-white/20 backdrop-blur-md border border-white/30 shadow-xl;
+  }
+}

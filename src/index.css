@@ -8,8 +8,8 @@
   --color-brand-brown: #4a2e23;
   /* Richer, darker chocolate */
   --color-brand-white: #ffffff;
-  --font-sans: 'Nunito', 'Inter', system-ui, sans-serif;
-  --font-heading: 'Fredoka', 'Chewy', 'Outfit', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
 }
 
 @layer base {

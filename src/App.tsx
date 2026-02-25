@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import Lenis from '@studio-freight/lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Navbar from './components/Navbar'
@@ -12,6 +11,7 @@ import { Routes, Route } from 'react-router-dom'
 import Location from './components/Location'
 import Footer from './components/Footer'
 import Menu from './pages/Menu'
+import WhatsAppButton from './components/WhatsAppButton'
 
 function Home() {
   return (
@@ -32,37 +32,23 @@ function App() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-      smooth: true,
-      mouseMultiplier: 1,
-      smoothTouch: false, // Critical for mobile performance (use native scroll)
-      touchMultiplier: 2,
-      infinite: false,
-    } as any)
-
-    // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
-    lenis.on('scroll', ScrollTrigger.update)
-
-    // Add Lenis's request animation frame to GSAP's ticker
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000)
-    })
-
-    // Turn off GSAP's lag smoothing to prevent desyncing during heavy loads
+    // Turn off GSAP's lag smoothing to maintain animation consistency across natural scroll events
     gsap.ticker.lagSmoothing(0)
 
-    return () => lenis.destroy();
+    // Cleanup animations if component unmounts
+    return () => {
+      ScrollTrigger.getAll().forEach(t => t.kill());
+    };
   }, [])
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/menu" element={<Menu />} />
-    </Routes>
+    <>
+      <WhatsAppButton />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
+      </Routes>
+    </>
   )
 }
 

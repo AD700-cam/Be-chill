@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function WhatsAppButton() {
     const phoneNumber = "919731687730"; // Formatted with country code
     const message = "Hi! I'd like to know more about Be Chill.";

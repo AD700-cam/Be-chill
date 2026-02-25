@@ -106,7 +106,7 @@ export default function Location() {
                             href="https://maps.app.goo.gl/MQarUVtuL56FVLLU9"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-white text-brand-pink font-bold py-4 rounded-full text-center hover:bg-brand-yellow hover:text-brand-brown transition-colors shadow-[0_10px_20px_rgba(0,0,0,0.1)] flex justify-center items-center gap-3 text-lg z-10 group/btn"
+                            className="bg-white text-brand-pink font-bold py-4 rounded-full text-center active:scale-95 hover:bg-brand-yellow hover:text-brand-brown transition-all shadow-brand flex justify-center items-center gap-3 text-lg z-10 group/btn"
                         >
                             Get Directions <span className="group-hover/btn:translate-x-2 transition-transform duration-300">📍</span>
                         </a>

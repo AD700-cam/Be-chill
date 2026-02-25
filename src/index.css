@@ -91,4 +91,29 @@
   .glass {
     @apply bg-white/20 backdrop-blur-md border border-white/30 shadow-xl;
   }
+
+  .gradient-bg {
+    background: linear-gradient(-45deg, #f5eed3, #ffd1ea, #f5eed3, #ffe6cc);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+
+  .shadow-brand {
+    box-shadow: 0 10px 40px rgba(209, 77, 159, 0.15);
+    /* Soft pink glow wrapper */
+  }
+
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }

@@ -26,8 +26,8 @@ export default function WhatsAppButton() {
                 </svg>
 
                 <div className="flex flex-col items-start leading-tight pr-1">
-                    <span className="text-[10px] md:text-xs font-medium text-white/90">Need help?</span>
-                    <span className="text-sm md:text-base font-bold tracking-wide">Chat with us</span>
+                    <span className="text-[10px] md:text-xs font-medium text-white/90">Order / Book Table</span>
+                    <span className="text-sm md:text-base font-bold tracking-wide">On WhatsApp</span>
                 </div>
             </a>
         </div>

@@ -47,7 +47,27 @@ export default function Hero() {
                     <p className="text-lg sm:text-xl md:text-2xl font-medium text-brand-brown/80 max-w-lg mx-auto md:mx-0">
                         Where every visit feels like a good day. Grab the best ice cream sundae in town and just <span className="font-bold text-brand-pink">be chill</span>.
                     </p>
-                    <div className="flex flex-row gap-3 sm:gap-4 justify-center md:justify-start mt-8 sm:mt-4 px-2 sm:px-0 w-full">
+                    <div className="mt-8 sm:mt-6 max-w-sm mx-auto md:mx-0 w-full px-2 sm:px-0 z-20 relative">
+                        <form className="flex flex-col sm:flex-row gap-2 w-full" onSubmit={(e) => { e.preventDefault(); alert('Joined successfully!'); }}>
+                            <input
+                                type="tel"
+                                placeholder="Enter Phone Number..."
+                                className="flex-1 px-5 py-3 sm:py-4 rounded-full border-2 border-brand-pink/20 focus:border-brand-pink focus:ring-4 focus:ring-brand-pink/20 outline-none transition-all shadow-inner text-brand-brown bg-white/90 backdrop-blur-sm placeholder:text-brand-brown/40 font-medium"
+                                required
+                                pattern="[0-9]{10}"
+                                title="10 digit phone number"
+                            />
+                            <button
+                                type="submit"
+                                className="bg-brand-brown text-brand-yellow font-bold px-6 py-3 sm:py-4 rounded-full shadow-lg active:scale-95 hover:scale-105 transition-all duration-300 outline-none focus-visible:ring-4 focus-visible:ring-brand-brown/50 whitespace-nowrap"
+                            >
+                                Join Club
+                            </button>
+                        </form>
+                        <p className="text-xs text-brand-brown/70 mt-3 text-center md:text-left font-medium">Join our community for exclusive updates.</p>
+                    </div>
+
+                    <div className="flex flex-row gap-3 sm:gap-4 justify-center md:justify-start mt-6 px-2 sm:px-0 w-full z-20 relative">
                         <button
                             onClick={() => document.getElementById('flavors')?.scrollIntoView({ behavior: 'smooth' })}
                             className="bg-brand-pink text-white font-bold text-sm sm:text-lg px-4 py-3 sm:px-8 sm:py-4 rounded-full shadow-brand active:scale-95 hover:scale-105 transition-all duration-300 flex-1 sm:flex-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-pink/50"

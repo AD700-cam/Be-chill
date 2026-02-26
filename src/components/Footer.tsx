@@ -15,31 +15,46 @@ export default function Footer() {
                 </div>
 
                 {/* Quick Links */}
+                {/* Explore & Social */}
                 <div>
-                    <h3 className="font-bold text-xl mb-4 text-white">Explore</h3>
-                    <ul className="space-y-4 md:space-y-2 opacity-80">
-                        <li><a href="#" className="inline-block py-2 hover:text-brand-pink transition-colors focus-visible:outline-none focus-visible:text-brand-pink">Menu</a></li>
-                        <li><a href="#" className="inline-block py-2 hover:text-brand-pink transition-colors focus-visible:outline-none focus-visible:text-brand-pink">Our Story</a></li>
-                        <li><a href="#" className="inline-block py-2 hover:text-brand-pink transition-colors focus-visible:outline-none focus-visible:text-brand-pink">Locations</a></li>
-                        <li><a href="#" className="inline-block py-2 hover:text-brand-pink transition-colors focus-visible:outline-none focus-visible:text-brand-pink">Contact</a></li>
-                    </ul>
-                </div>
-
-                {/* Social */}
-                <div>
-                    <h3 className="font-bold text-xl mb-4 text-white">Social</h3>
-                    <ul className="space-y-4 md:space-y-2 opacity-80">
+                    <h3 className="font-bold text-xl mb-4 text-white">Links</h3>
+                    <ul className="space-y-2 opacity-80 mb-6">
+                        <li><a href="#" className="inline-block hover:text-brand-pink transition-colors focus-visible:outline-none focus-visible:text-brand-pink">Menu</a></li>
+                        <li><a href="#" className="inline-block hover:text-brand-pink transition-colors focus-visible:outline-none focus-visible:text-brand-pink">Our Story</a></li>
+                        <li><a href="#" className="inline-block hover:text-brand-pink transition-colors focus-visible:outline-none focus-visible:text-brand-pink">Locations</a></li>
                         <li>
                             <a
                                 href="https://www.instagram.com/bechill_sundae?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block py-2 hover:text-brand-pink transition-colors"
+                                className="inline-block hover:text-brand-pink transition-colors"
                             >
                                 Instagram
                             </a>
                         </li>
                     </ul>
+                </div>
+
+                {/* Join the Club */}
+                <div>
+                    <h3 className="font-bold text-xl mb-4 text-white">Join the Chill Club</h3>
+                    <p className="text-sm opacity-80 mb-4">Get exclusive updates and offers sent directly to your phone.</p>
+                    <form className="flex flex-col gap-2" onSubmit={(e) => { e.preventDefault(); alert('Subscribed successfully!'); }}>
+                        <input
+                            type="tel"
+                            placeholder="Phone Number"
+                            className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/50 outline-none transition-all"
+                            required
+                            pattern="[0-9]{10}"
+                            title="10 digit phone number"
+                        />
+                        <button
+                            type="submit"
+                            className="w-full bg-brand-pink text-white font-bold py-2 rounded-lg hover:bg-white hover:text-brand-pink transition-colors outline-none focus-visible:ring-2 focus-visible:ring-white"
+                        >
+                            Subscribe
+                        </button>
+                    </form>
                 </div>
             </div>
 

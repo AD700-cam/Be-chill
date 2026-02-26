@@ -113,13 +113,13 @@ export default function SizzlingBrownie() {
         {
             title: "OG Vanilla",
             description: "A classic, perfectly round scoop of rich vanilla bean ice cream served elegantly in a premium bowl.",
-            image: "/images/special-2.png",
+            image: "/images/og-vanilla.png",
             accent: "text-brand-pink"
         },
         {
             title: "Fruit Whirl",
             description: "A colorful ice cream sundae layered thickly with fresh chopped tropical fruits and swirling syrup.",
-            image: "/images/fruit-whirl-new.jpg",
+            image: "/images/fruit-whirl.png",
             accent: "text-brand-white"
         }
     ];

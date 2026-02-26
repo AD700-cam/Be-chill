@@ -5,8 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const flavors = [
-    { name: 'Fruit Loot', desc: 'Fresh tropical fruits with vanilla cream and a hint of mint.', image: '/images/flavors/pineapple.png', color: 'bg-yellow-50', price: '209', kcal: '612 Kcal' },
-    { name: 'Banoffee Sundae', desc: 'The classic banana and toffee combination, perfectly layered.', image: '/images/flavors/banana-split.png', color: 'bg-pink-50', price: '219', kcal: '648 Kcal' },
+    { name: 'Fruit Loot', desc: 'Fresh tropical fruits with vanilla cream and a hint of mint.', image: '/images/flavors/fruit-loot.png', color: 'bg-yellow-50', price: '209', kcal: '612 Kcal' },
+    { name: 'Banoffee Sundae', desc: 'The classic banana and toffee combination, perfectly layered.', image: '/images/flavors/banoffee-sundae.png', color: 'bg-pink-50', price: '219', kcal: '648 Kcal' },
     { name: 'Gulab Jamun Delight', desc: 'Warm, syrupy gulab jamun paired with chilled artisanal vanilla.', image: '/images/flavors/gulab-jamun.png', color: 'bg-orange-50', price: '195', kcal: '170 Kcal' },
 ];
 

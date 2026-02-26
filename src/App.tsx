@@ -12,7 +12,6 @@ import Location from './components/Location'
 import Footer from './components/Footer'
 import Menu from './pages/Menu'
 import WhatsAppButton from './components/WhatsAppButton'
-import LeadCapturePopup from './components/LeadCapturePopup'
 
 function Home() {
   return (
@@ -45,7 +44,6 @@ function App() {
   return (
     <>
       <WhatsAppButton />
-      <LeadCapturePopup />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />

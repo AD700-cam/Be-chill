@@ -1,4 +1,35 @@
+import { useState } from 'react';
+
 export default function Footer() {
+    const [phone, setPhone] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setMessage('');
+
+        try {
+            await fetch('https://script.google.com/macros/s/AKfycbzlpIzsh58qhn-GVK5hlP23MuYLGUHYqEGmnowqImLap2SUHwYETG3u-MiPRI3i4y0n1Q/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                body: JSON.stringify({ phone, source: 'Footer Form' }),
+                headers: {
+                    'Content-Type': 'text/plain;charset=utf-8',
+                }
+            });
+
+            setMessage('Subscribed successfully!');
+            setPhone('');
+            setTimeout(() => setMessage(''), 5000);
+        } catch (error) {
+            console.error('Fetch error:', error);
+            setMessage(`Error: ${error instanceof Error ? error.message : String(error)}`);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
     return (
         <footer className="bg-brand-brown text-brand-yellow py-12 px-6">
             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 text-center sm:text-left">
@@ -39,22 +70,31 @@ export default function Footer() {
                 <div>
                     <h3 className="font-bold text-xl mb-4 text-white">Join the Chill Club</h3>
                     <p className="text-sm opacity-80 mb-4">Get exclusive updates and offers sent directly to your phone.</p>
-                    <form className="flex flex-col gap-2" onSubmit={(e) => { e.preventDefault(); alert('Subscribed successfully!'); }}>
+                    <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
                         <input
                             type="tel"
+                            id="footer-phone-input"
+                            name="phone"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
                             placeholder="Phone Number"
-                            className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/50 outline-none transition-all"
+                            className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/50 outline-none transition-all disabled:opacity-50"
                             required
                             pattern="[0-9]{10}"
                             title="10 digit phone number"
+                            disabled={isSubmitting}
                         />
                         <button
                             type="submit"
-                            className="w-full bg-brand-pink text-white font-bold py-2 rounded-lg hover:bg-white hover:text-brand-pink transition-colors outline-none focus-visible:ring-2 focus-visible:ring-white"
+                            disabled={isSubmitting}
+                            className="w-full bg-brand-pink text-white font-bold py-2 rounded-lg hover:bg-white hover:text-brand-pink transition-colors outline-none focus-visible:ring-2 focus-visible:ring-white disabled:opacity-50 disabled:hover:bg-brand-pink disabled:hover:text-white"
                         >
-                            Subscribe
+                            {isSubmitting ? 'Subscribing...' : 'Subscribe'}
                         </button>
                     </form>
+                    {message && (
+                        <p className="text-sm font-bold text-brand-pink mt-2">{message}</p>
+                    )}
                 </div>
             </div>
 

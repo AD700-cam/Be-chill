@@ -62,83 +62,91 @@ export default function Hero() {
     return (
         <section
             ref={containerRef}
-            className="relative min-h-[100dvh] min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-12"
+            className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-32 pb-16"
             style={{
-                background: 'radial-gradient(circle at center, var(--brand-yellow) 0%, rgba(248, 241, 186, 0.5) 100%)'
+                background: 'radial-gradient(circle at center, var(--brand-yellow) 0%, rgba(248, 241, 186, 0.3) 100%)'
             }}
         >
-            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
+            <div className="container-chill grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center z-10">
 
                 {/* Text Content */}
-                <div className="flex flex-col gap-6 text-center md:text-left">
-                    <h1 ref={headingRef} className="text-5xl sm:text-6xl md:text-8xl font-bold text-brand-pink text-glow leading-tight">
-                        The finest scoops<br />in Kolar.
+                <div className="flex flex-col gap-6 md:gap-8 text-center lg:text-left order-2 lg:order-1">
+                    <h1 ref={headingRef} className="text-brand-pink text-glow text-balance">
+                        The finest scoops<br className="hidden md:block" /> in Kolar.
                     </h1>
-                    <p className="text-lg sm:text-xl md:text-2xl font-medium text-brand-brown/80 max-w-lg mx-auto md:mx-0">
-                        Where every visit feels like a good day. Grab the best ice cream sundae in town and just <span className="font-bold text-brand-pink">be chill</span>.
+                    <p className="text-lg md:text-2xl font-bold text-brand-brown/70 max-w-xl mx-auto lg:mx-0 leading-relaxed text-pretty">
+                        Where every visit feels like a good day. Grab the best ice cream sundae in town and just <span className="font-black text-brand-pink">be chill</span>.
                     </p>
-                    <div className="mt-8 sm:mt-6 max-w-sm mx-auto md:mx-0 w-full px-2 sm:px-0 z-20 relative">
-                        <form className="flex flex-col sm:flex-row gap-2 w-full" onSubmit={handleSubmit}>
-                            <input
-                                type="tel"
-                                id="hero-phone-input"
-                                name="phone"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                                placeholder="Enter Phone Number..."
-                                className="flex-1 px-5 py-3 sm:py-4 rounded-full border-2 border-brand-pink/20 focus:border-brand-pink focus:ring-4 focus:ring-brand-pink/20 outline-none transition-all shadow-inner text-brand-brown bg-white/90 backdrop-blur-sm placeholder:text-brand-brown/40 font-medium disabled:opacity-70"
-                                required
-                                pattern="[0-9]{10}"
-                                title="10 digit phone number"
-                                disabled={isSubmitting}
-                            />
+
+                    <div className="mt-4 max-w-md mx-auto lg:mx-0 w-full relative z-20">
+                        <form className="flex flex-col sm:flex-row gap-3 w-full" onSubmit={handleSubmit}>
+                            <div className="relative flex-1 group">
+                                <input
+                                    type="tel"
+                                    id="hero-phone-input"
+                                    name="phone"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                    placeholder="Enter Phone Number..."
+                                    className="w-full px-6 py-4 rounded-2xl border-2 border-brand-pink/10 focus:border-brand-pink focus:ring-4 focus:ring-brand-pink/10 outline-none transition-all shadow-sm text-brand-brown bg-white/80 backdrop-blur-sm placeholder:text-brand-brown/30 font-bold disabled:opacity-70"
+                                    required
+                                    pattern="[0-9]{10}"
+                                    title="10 digit phone number"
+                                    disabled={isSubmitting}
+                                />
+                                <div className="absolute inset-0 rounded-2xl border border-brand-pink/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                            </div>
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="bg-brand-brown text-brand-yellow font-bold px-6 py-3 sm:py-4 rounded-full shadow-lg active:scale-95 hover:scale-105 transition-all duration-300 outline-none focus-visible:ring-4 focus-visible:ring-brand-brown/50 whitespace-nowrap disabled:opacity-70 disabled:hover:scale-100 disabled:active:scale-100"
+                                className="bg-brand-brown text-brand-yellow font-black px-8 py-4 rounded-2xl shadow-xl active:scale-95 lg:hover:scale-105 transition-all duration-300 outline-none focus-visible:ring-4 focus-visible:ring-brand-brown/40 whitespace-nowrap disabled:opacity-70 disabled:hover:scale-100 uppercase tracking-widest text-sm"
                             >
                                 {isSubmitting ? 'Joining...' : 'Join Club'}
                             </button>
                         </form>
                         {message ? (
-                            <p className="text-sm font-bold text-brand-pink mt-3 text-center md:text-left">{message}</p>
+                            <p className="text-sm font-bold text-brand-pink mt-4 animate-in fade-in slide-in-from-top-2">{message}</p>
                         ) : (
-                            <p className="text-xs text-brand-brown/70 mt-3 text-center md:text-left font-medium">Join our community for exclusive updates.</p>
+                            <p className="text-xs text-brand-brown/60 mt-4 font-bold uppercase tracking-wider flex items-center justify-center lg:justify-start gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-brand-pink animate-pulse"></span>
+                                Join the community for exclusive updates
+                            </p>
                         )}
                     </div>
 
-                    <div className="flex flex-row gap-3 sm:gap-4 justify-center md:justify-start mt-6 px-2 sm:px-0 w-full z-20 relative">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-4 w-full z-20 relative px-4 sm:px-0">
                         <button
                             onClick={() => document.getElementById('flavors')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="bg-brand-pink text-white font-bold text-sm sm:text-lg px-4 py-3 sm:px-8 sm:py-4 rounded-full shadow-brand active:scale-95 hover:scale-105 transition-all duration-300 flex-1 sm:flex-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-pink/50"
+                            className="bg-brand-pink text-white font-black text-lg px-10 py-4 rounded-2xl shadow-brand active:scale-95 lg:hover:scale-105 transition-all duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-pink/40"
                         >
                             See Menu
                         </button>
                         <button
                             onClick={() => document.getElementById('location')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="bg-white text-brand-pink font-bold text-sm sm:text-lg px-4 py-3 sm:px-8 sm:py-4 rounded-full shadow-brand active:scale-95 border-2 border-brand-pink hover:bg-brand-pink hover:text-white transition-all duration-300 flex-1 sm:flex-none focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-pink/50"
+                            className="bg-white/50 backdrop-blur-sm text-brand-pink font-black text-lg px-10 py-4 rounded-2xl shadow-brand active:scale-95 border-2 border-brand-pink/20 lg:hover:border-brand-pink lg:hover:bg-brand-pink lg:hover:text-white transition-all duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-pink/40"
                         >
                             Find Us
                         </button>
                     </div>
                 </div>
 
-                <div className="relative flex justify-center items-center mt-8 md:mt-0">
-                    {/* We will replace the src with actual imagery from the user's provided files */}
+                <div className="relative flex justify-center items-center order-1 lg:order-2">
                     <div
                         ref={imageRef}
-                        className="w-full max-w-[280px] sx:max-w-[320px] md:max-w-[400px] aspect-[10/9] bg-gradient-to-tr from-brand-pink/20 to-brand-yellow rounded-[2.5rem] md:rounded-[4rem] flex items-center justify-center relative shadow-2xl"
+                        className="w-full max-w-[320px] md:max-w-[450px] aspect-square rounded-[3rem] md:rounded-[5rem] flex items-center justify-center relative shadow-2xl"
                     >
-                        <div className="absolute inset-0 rounded-[2.5rem] md:rounded-[4rem] border-4 border-dashed border-brand-pink animate-spin-slow opacity-20"></div>
-                        {/* Actual Logo Video  - Cropped to Rounded Rectangle */}
-                        <div className="w-[92%] h-[88%] rounded-[2rem] md:rounded-[3rem] overflow-hidden flex items-center justify-center relative z-10 bg-brand-yellow">
+                        <div className="absolute inset-[-10px] rounded-[3.5rem] md:rounded-[5.5rem] border-2 border-dashed border-brand-pink/30 animate-spin-slow opacity-40"></div>
+                        <div className="absolute inset-[-20px] rounded-[4rem] md:rounded-[6rem] border border-brand-brown/5 animate-reverse-spin opacity-20"></div>
+
+                        {/* Actual Logo Video */}
+                        <div className="w-[94%] h-[94%] rounded-[2.5rem] md:rounded-[4.5rem] overflow-hidden flex items-center justify-center relative z-10 bg-brand-yellow shadow-inner border border-white/50">
                             <video
                                 src="/hero-video.mp4"
                                 autoPlay
                                 loop
                                 muted
                                 playsInline
-                                className="w-full h-full object-cover mix-blend-multiply"
+                                className="w-full h-full object-cover mix-blend-multiply opacity-95"
                             />
                         </div>
                     </div>

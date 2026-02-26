@@ -36,16 +36,16 @@ export default function Navbar() {
         <>
             <nav
                 ref={navRef}
-                className={`fixed top-4 left-0 right-0 mx-auto w-[95%] max-w-7xl z-50 px-5 sm:px-8 py-2 md:py-3 transition-all duration-300 rounded-[1.5rem] md:rounded-full border border-white/50 shadow-2xl ${isScrolled ? 'bg-brand-yellow/90 backdrop-blur-md' : 'glass text-brand-brown'}`}
+                className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'top-2' : 'top-4'}`}
             >
-                <div className="max-w-7xl mx-auto flex justify-between items-center">
+                <div className={`container-chill transition-all duration-500 rounded-[1.5rem] md:rounded-full border border-white/40 shadow-2xl flex justify-between items-center py-2 md:py-3 ${isScrolled ? 'bg-brand-yellow/85 backdrop-blur-xl py-1 md:py-2' : 'bg-white/10 backdrop-blur-md'}`}>
                     {/* Logo Image */}
-                    <div className="cursor-pointer">
-                        <img src="/logo.jpg" alt="Be Chill Logo" className="h-10 md:h-14 rounded-xl shadow-sm object-cover mix-blend-multiply" />
+                    <div className="cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                        <img src="/logo.jpg" alt="Be Chill Logo" className="h-10 md:h-14 rounded-xl shadow-sm object-cover mix-blend-multiply transition-transform hover:scale-105" />
                     </div>
 
                     {/* Desktop Menu */}
-                    <ul className="hidden md:flex gap-8 font-semibold text-lg items-center">
+                    <ul className="hidden md:flex gap-8 lg:gap-12 font-semibold text-lg items-center">
                         <li tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter') document.getElementById('flavors')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-brand-pink transition-colors cursor-pointer focus-visible:outline-none focus-visible:text-brand-pink" onClick={() => document.getElementById('flavors')?.scrollIntoView({ behavior: 'smooth' })}>Flavors</li>
                         <li tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter') document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-brand-pink transition-colors cursor-pointer focus-visible:outline-none focus-visible:text-brand-pink" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>About</li>
                         <li tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter') document.getElementById('social')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-brand-pink transition-colors cursor-pointer focus-visible:outline-none focus-visible:text-brand-pink" onClick={() => document.getElementById('social')?.scrollIntoView({ behavior: 'smooth' })}>Social</li>
@@ -54,7 +54,7 @@ export default function Navbar() {
                                 href="https://maps.app.goo.gl/MQarUVtuL56FVLLU9"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-brand-pink text-brand-white px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform shadow-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-pink/50"
+                                className="bg-brand-pink text-brand-white px-8 py-2.5 rounded-full font-bold hover:bg-brand-brown hover:scale-105 transition-all shadow-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-pink/50"
                             >
                                 Visit Us
                             </a>
@@ -65,10 +65,10 @@ export default function Navbar() {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-4xl text-brand-pink w-12 h-12 flex items-center justify-center transition-transform hover:scale-105"
+                            className="bg-brand-pink/10 p-2 rounded-xl text-brand-pink w-12 h-12 flex items-center justify-center transition-all hover:bg-brand-pink/20"
                             aria-label="Toggle Menu"
                         >
-                            {isOpen ? '✕' : '☰'}
+                            <span className="text-3xl font-bold">{isOpen ? '✕' : '☰'}</span>
                         </button>
                     </div>
                 </div>

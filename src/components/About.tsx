@@ -30,52 +30,53 @@ export default function About() {
     }, []);
 
     return (
-        <section ref={sectionRef} id="about" className="py-24 bg-brand-yellow/10 overflow-hidden relative">
-            <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+        <section ref={sectionRef} id="about" className="section-padding bg-brand-yellow/10 overflow-hidden relative">
+            <div className="container-chill flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
                 {/* Image Side */}
-                <div ref={imageRef} className="flex-1 relative group">
-                    <div className="absolute -inset-4 bg-brand-pink/20 rounded-[3rem] blur-2xl group-hover:bg-brand-pink/30 transition-colors duration-500"></div>
-                    <div className="relative aspect-square rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl bg-brand-brown">
+                <div ref={imageRef} className="flex-1 relative group w-full max-w-xl lg:max-w-none">
+                    <div className="absolute -inset-4 bg-brand-pink/15 rounded-[3.5rem] blur-2xl group-hover:bg-brand-pink/25 transition-colors duration-500"></div>
+                    <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-[3rem] md:rounded-[4rem] overflow-hidden border-4 md:border-8 border-white shadow-2xl bg-brand-brown">
                         <img
                             src="/images/storefront.jpg"
                             alt="Be Chill Storefront"
-                            className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                            className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-110"
                             loading="lazy"
                         />
                     </div>
                     {/* Decorative Element */}
-                    <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-yellow rounded-full border-4 border-white flex items-center justify-center shadow-xl rotate-12 group-hover:rotate-0 transition-transform duration-500 z-20">
-                        <span className="text-brand-brown font-bold text-center leading-tight">Est.<br />2024</span>
+                    <div className="absolute -bottom-6 -right-4 md:-right-6 w-28 h-28 md:w-36 md:h-36 bg-brand-yellow rounded-full border-4 border-white flex items-center justify-center shadow-2xl rotate-12 group-hover:rotate-0 transition-transform duration-500 z-20">
+                        <span className="text-brand-brown font-black text-center leading-tight text-sm md:text-lg">Est.<br />2024</span>
                     </div>
                 </div>
 
                 {/* Content Side */}
-                <div ref={contentRef} className="flex-1 text-center md:text-left">
-                    <h2 className="text-5xl sm:text-6xl md:text-9xl font-bold text-brand-brown font-heading mb-6 sm:mb-8 leading-tight uppercase tracking-tighter">
-                        <span className="text-brand-pink underline decoration-brand-yellow">Be</span> Chill
+                <div ref={contentRef} className="flex-1 text-center lg:text-left">
+                    <span className="text-brand-pink font-black uppercase tracking-[0.2em] text-sm mb-4 block">Our Story</span>
+                    <h2 className="text-brand-pink text-glow text-balance mb-8">
+                        We're not just<br /> making ice cream.
                     </h2>
-                    <div className="space-y-4 sm:space-y-6 text-base sm:text-xl text-brand-brown/80 font-medium leading-relaxed max-w-lg mx-auto md:mx-0">
+
+                    <div className="space-y-6 md:space-y-8 text-brand-brown/70 font-bold leading-relaxed max-w-2xl mx-auto lg:mx-0 text-pretty text-lg md:text-xl">
                         <p>
-                            At <span className="text-brand-pink font-bold">Be Chill</span>, we believe that happiness is best served frozen. What started as a small dream to redefine the local ice cream experience has grown into a community of dessert enthusiasts.
+                            At <span className="text-brand-pink font-black">Be Chill</span>, we believe that happiness is best served frozen. What started as a small dream to redefine the local ice cream experience has grown into a vibrant community of dessert enthusiasts.
                         </p>
                         <p>
-                            We don't just scoop ice cream; we craft moments. Every flavor is a result of hundreds of trials, ensuring a perfect balance of texture, sweetness, and that "wow" factor that keeps you coming back.
+                            We don't just scoop ice cream; we craft moments. Every flavor is a result of hundreds of trials, ensuring a perfect balance of texture, sweetness, and that "wow" factor.
                         </p>
-                        <div className="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
-                            <div className="bg-white px-4 sm:px-6 py-2 rounded-full border border-brand-brown/10 shadow-sm flex items-center gap-2 text-sm sm:text-base">
-                                <span className="text-brand-pink">✔</span> ✨ Handcrafted Daily
+                        <div className="pt-4 flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
+                            <div className="bg-white/80 backdrop-blur-sm px-5 py-2.5 rounded-2xl border border-brand-brown/5 shadow-sm flex items-center gap-3 text-sm md:text-base font-black text-brand-brown/90 hover:border-brand-pink/20 transition-colors">
+                                <span className="text-brand-pink text-xl">✨</span> Handcrafted Daily
                             </div>
-                            <div className="bg-white px-4 sm:px-6 py-2 rounded-full border border-brand-brown/10 shadow-sm flex items-center gap-2 text-sm sm:text-base">
-                                <span className="text-brand-pink">✔</span> 🥛 Premium Dairy
+                            <div className="bg-white/80 backdrop-blur-sm px-5 py-2.5 rounded-2xl border border-brand-brown/5 shadow-sm flex items-center gap-3 text-sm md:text-base font-black text-brand-brown/90 hover:border-brand-pink/20 transition-colors">
+                                <span className="text-brand-pink text-xl">🥛</span> Premium Dairy
                             </div>
-                            <div className="bg-white px-4 sm:px-6 py-2 rounded-full border border-brand-brown/10 shadow-sm flex items-center gap-2 text-sm sm:text-base">
-                                <span className="text-brand-pink">✔</span> 🍓 Natural Fruits
+                            <div className="bg-white/80 backdrop-blur-sm px-5 py-2.5 rounded-2xl border border-brand-brown/5 shadow-sm flex items-center gap-3 text-sm md:text-base font-black text-brand-brown/90 hover:border-brand-pink/20 transition-colors">
+                                <span className="text-brand-pink text-xl">🍓</span> Natural Fruits
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             {/* Background Texture/Blobs */}

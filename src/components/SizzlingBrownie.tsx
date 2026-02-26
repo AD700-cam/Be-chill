@@ -127,12 +127,12 @@ export default function SizzlingBrownie() {
     return (
         <section ref={containerRef} className="relative w-full h-screen overflow-hidden bg-brand-brown">
             {/* Header Title inside the pinned section */}
-            <div className="absolute top-6 left-6 md:top-24 md:left-24 z-20">
-                <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold text-brand-white font-heading text-glow drop-shadow-2xl">
-                    Signature <br className="md:hidden" /><span className="text-brand-pink">Specials</span>
+            <div className="absolute top-10 left-1/2 -translate-x-1/2 lg:left-24 lg:translate-x-0 z-20 text-center lg:text-left w-full lg:w-auto px-6">
+                <h2 className="text-brand-white text-glow drop-shadow-2xl">
+                    Signature <span className="text-brand-pink">Specials</span>
                 </h2>
-                <p className="text-base sm:text-xl text-brand-yellow/80 mt-1 md:mt-2 font-medium max-w-[200px] md:max-w-md hidden sm:block">
-                    Experience our premium curated dessert signatures wrapped in beautiful square shapes.
+                <p className="text-sm md:text-2xl text-brand-yellow/70 mt-4 font-black uppercase tracking-[0.3em] hidden sm:block">
+                    Premium curated dessert signatures
                 </p>
             </div>
 
@@ -143,43 +143,43 @@ export default function SizzlingBrownie() {
             >
                 <div
                     ref={sliderRef}
-                    className="flex flex-nowrap h-full items-center transition-transform lg:transition-none"
+                    className="flex flex-nowrap h-full items-center"
                     style={{
                         width: window.innerWidth < 768 ? 'max-content' : `${specials.length * 100}vw`,
-                        willChange: window.innerWidth >= 768 ? 'transform' : 'auto'
+                        willChange: 'transform'
                     }}
                 >
                     {specials.map((special, idx) => (
-                        <div key={idx} className="brownie-slide flex-shrink-0 w-screen h-full flex items-center justify-center relative px-4 sm:px-6 md:px-24 snap-center">
-                            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 w-full max-w-7xl relative z-10 mt-32 md:mt-24">
+                        <div key={idx} className="brownie-slide flex-shrink-0 w-screen h-full flex items-center justify-center relative px-6 md:px-24 snap-center">
+                            <div className="container-chill flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 w-full relative z-10 mt-24 lg:mt-0">
 
                                 {/* Text Content */}
-                                <div className="flex-1 text-center md:text-left w-full px-4 md:px-0">
-                                    <h3 className={`text-4xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-6 ${special.accent} font-heading drop-shadow-xl`}>
+                                <div className="flex-1 text-center lg:text-left w-full">
+                                    <h3 className={`text-5xl md:text-9xl font-black mb-8 ${special.accent} font-brand drop-shadow-2xl uppercase tracking-tighter italic`}>
                                         {special.title}
                                     </h3>
-                                    <p className="text-lg sm:text-2xl text-white/90 font-medium leading-relaxed max-w-xl mx-auto md:mx-0">
+                                    <p className="text-lg md:text-3xl text-white/95 font-bold leading-relaxed max-w-xl mx-auto lg:mx-0 text-balance">
                                         {special.description}
                                     </p>
                                 </div>
 
                                 {/* Image Container */}
-                                <div className="flex-1 flex justify-center w-full px-4 md:px-0">
-                                    <div className="relative w-full max-w-[260px] sm:max-w-sm md:max-w-lg aspect-square rounded-[2rem] md:rounded-[4rem] overflow-hidden shadow-[0_0_50px_rgba(209,77,159,0.3)] bg-gradient-to-br from-white/10 to-brand-brown/40 border-4 md:border-8 border-white/30 backdrop-blur-sm group">
+                                <div className="flex-1 flex justify-center w-full">
+                                    <div className="relative w-full max-w-[280px] md:max-w-xl aspect-square rounded-[3rem] md:rounded-[5rem] overflow-hidden shadow-[0_0_80px_rgba(209,77,159,0.4)] bg-gradient-to-br from-white/10 to-transparent border-4 md:border-8 border-white/20 backdrop-blur-md group">
                                         {/* Brand Blobs */}
-                                        <div className="absolute top-0 right-0 w-24 md:w-32 h-24 md:w-32 bg-brand-pink/20 blur-3xl rounded-full"></div>
-                                        <div className="absolute bottom-0 left-0 w-24 md:w-32 h-24 md:w-32 bg-brand-yellow/20 blur-3xl rounded-full"></div>
+                                        <div className="absolute top-0 right-0 w-32 md:w-48 h-32 md:h-48 bg-brand-pink/20 blur-[80px] rounded-full"></div>
+                                        <div className="absolute bottom-0 left-0 w-32 md:w-48 h-32 md:h-48 bg-brand-yellow/10 blur-[80px] rounded-full"></div>
 
                                         <img
                                             src={special.image}
                                             alt={special.title}
-                                            className="w-full h-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-1000 ease-out"
+                                            className="w-full h-full object-cover relative z-10 lg:group-hover:scale-110 transition-transform duration-1000 ease-out"
                                             loading="lazy"
                                         />
 
-                                        {/* Badge counter for verification */}
-                                        <div className="absolute top-6 left-6 z-20 bg-brand-pink text-brand-white px-4 py-1 rounded-full font-bold text-xl shadow-lg border border-white/50">
-                                            {idx + 1}/{specials.length}
+                                        {/* Badge counter */}
+                                        <div className="absolute top-8 left-8 z-20 bg-brand-pink text-white px-6 py-2 rounded-2xl font-black text-2xl shadow-2xl border-2 border-white/30">
+                                            {idx + 1}
                                         </div>
                                     </div>
                                 </div>

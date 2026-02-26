@@ -119,7 +119,7 @@ export default function SizzlingBrownie() {
         {
             title: "Fruit Whirl",
             description: "A colorful ice cream sundae layered thickly with fresh chopped tropical fruits and swirling syrup.",
-            image: "/images/special-3.png",
+            image: "/images/fruit-whirl-new.jpg",
             accent: "text-brand-white"
         }
     ];
